@@ -1,0 +1,12 @@
+In order to run EAP agents in ns-2 environment, following steps are necessary:
+
+1. install necessary ns-2 packages, or 'ns-allinone-*' as a whole.
+2. copy 'eap_erp.cc', 'eap_erp.h', and 'eap_erp_pkt.h' to /ns-2*/
+directory
+3. register the new packet header in 'packet.h' and 'ns-packet.tcl'.
+example files are attached in this folder.
+4. set default values for new agents in 'ns-default.tcl', example file
+is attached.
+5. modify the 'Makefile' in /ns-2* as needed, by adding eap_erp.o into
+the object list, example is attached as well.
+6. run 'make clean' and 'make' under /ns-2 directory to re-compile
